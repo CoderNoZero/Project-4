@@ -10,11 +10,13 @@
     <script>
         let rectWidth = 30;
         let rectY;
+        let rect2Y;
         let rectHeight = 100;
         function setup(){
             createCanvas(windowWidth,windowHeight);
             background("green");
             rectY = windowHeight/2-50;
+            rect2Y = windowHeight/2-50;a
         }
         function draw(){
             background("green");
@@ -22,12 +24,12 @@
             rect(10,rectY,rectWidth,rectHeight);
             if(keyIsPressed === true){
                 if(keyCode === 87){
-                    rectY += 3;
-                }else if(keyCode === 83){
                     rectY -= 3;
+                }else if(keyCode === 83){
+                    rectY += 3;
                 }
             }
-            rect(windowWidth-70,rectY,rectWidth,rectHeight);
+            rect(windowWidth-70,rect2Y,rectWidth,rectHeight);
             circle(windowWidth/2,windowHeight/2,50);
         }
     </script>
