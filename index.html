@@ -27,8 +27,13 @@
                     rectY -= 3;
                 }else if(keyCode === 83){
                     rectY += 3;
+                }else if(keyCode === 38){
+                    rect2Y -3;
+                }else if (keyCode === 40){
+                    rect2Y += 3
                 }
             }
+
             rect(windowWidth-70,rect2Y,rectWidth,rectHeight);
             circle(windowWidth/2,windowHeight/2,50);
         }
