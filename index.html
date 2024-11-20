@@ -14,11 +14,15 @@
         let rectHeight = 100;
         let p1Score = 0;
         let p2Score = 0;
+        let circX;
+        let circY;
         function setup(){
             createCanvas(windowWidth-30,windowHeight-30);
             background("green");
             rectY = windowHeight/2-50;
             rect2Y = windowHeight/2-50;
+            circX = windowWidth/2
+            circY = windowHeight/2
             text("p1Score: "+ p1Score,30,30)
             text("p2Score: "+ p2Score,30,30)
 
