@@ -47,6 +47,11 @@
             rect(windowWidth-70,rect2Y,rectWidth,rectHeight);
             circle(circX,circY,50);
             circX += 3
+            if(circY > rect2Y && circY < rect2Y + rectHeight  ){
+                if(circX > windowWidth-70){
+                    console.log("touching")
+                }
+            }
         }
     </script>
 </body>
