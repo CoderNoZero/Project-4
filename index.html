@@ -16,6 +16,8 @@
         let p2Score = 0;
         let circX;
         let circY;
+        //Add variable for ball direction  
+        //recreate 
         function setup(){
             createCanvas(windowWidth-30,windowHeight-30);
             background("green");
@@ -46,7 +48,7 @@
 
             rect(windowWidth-70,rect2Y,rectWidth,rectHeight);
             circle(circX,circY,50);
-            circX += 3
+            circX -= 3
             if(circY > rect2Y && circY < rect2Y + rectHeight  ){
                 if(circX > windowWidth-70){
                     console.log("touching")
