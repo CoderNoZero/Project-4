@@ -16,6 +16,7 @@
         let p2Score = 0;
         let circX;
         let circY;
+        let forward = true;
         //Add variable for ball direction  
         //recreate 
         function setup(){
@@ -23,8 +24,8 @@
             background("green");
             rectY = windowHeight/2-50;
             rect2Y = windowHeight/2-50;
-            circX = windowWidth/2
-            circY = windowHeight/2
+            circX = windowWidth/2;
+            circY = windowHeight/2;
 
         }
         function draw(){
@@ -48,15 +49,21 @@
 
             rect(windowWidth-70,rect2Y,rectWidth,rectHeight);
             circle(circX,circY,50);
+            if(forward == true){
+                circX += 3
+            }else{
             circX -= 3
+            }
             if(circY > rect2Y && circY < rect2Y + rectHeight  ){
                 if(circX > windowWidth-70){
                     console.log("touchingp2")
+                    forward = false
                 }
             }
             if(circY > rectY && circY < rectY +rectHeight){
                 if(circX < 70){
                     console.log("touchingp1")
+                    forward = true
                 }
             }
         }
