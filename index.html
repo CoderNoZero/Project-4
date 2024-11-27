@@ -51,7 +51,12 @@
             circX -= 3
             if(circY > rect2Y && circY < rect2Y + rectHeight  ){
                 if(circX > windowWidth-70){
-                    console.log("touching")
+                    console.log("touchingp2")
+                }
+            }
+            if(circY > rectY && circY < rectY +rectHeight){
+                if(circX < 70){
+                    console.log("touchingp1")
                 }
             }
         }
