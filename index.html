@@ -44,46 +44,50 @@
                 }else if(keyCode === 38){
                     rect2Y -= 3;
                 }else if (keyCode === 40){
-                    rect2Y += 3
+                    rect2Y += 3;
                 }
             }
 
             rect(windowWidth-70,rect2Y,rectWidth,rectHeight);
             circle(circX,circY,50);
             if(forward == true){
-                circX += 8
+                circX += 8;
             }else{
-            circX -= 8
+            circX -= 8;
             }
             if(circY > rect2Y && circY < rect2Y + rectHeight  ){
                 if(circX > windowWidth-70){
                     console.log("touchingp2")
-                    forward = false
+                    forward = false;
                 }
             }
             if(circY > rectY && circY < rectY +rectHeight){
                 if(circX < 70){
                     console.log("touchingp1")
-                    forward = true
+                    forward = true;
                 }
             }
             if(circY < 0){
-                up = false
+                up = false;
             }
             if(circY > height){
-                up = true
+                up = true;
             }
             if(up == true){
-                circY -=5
+                circY -=5;
             }
             if(up == false){
-                circY +=5
+                circY +=5;
             }
             if(circX > windowWidth){
-            p1Score += 1
+            p1Score += 1;
+            circX = windowWidth/2;
+            circY = windowHeight/2;
             }
             if(circX < 0){
-                p2Score += 1
+                p2Score += 1;
+                circX = windowWidth/2;
+                circY = windowHeight/2;
             }
         }
 
