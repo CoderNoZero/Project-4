@@ -17,6 +17,7 @@
         let circX;
         let circY;
         let forward = true;
+        let up = true
         //Add variable for ball direction  
         //recreate 
         function setup(){
@@ -66,7 +67,20 @@
                     forward = true
                 }
             }
+            if(circY < 0){
+                up = false
+            }
+            if(circY > height){
+                up = true
+            }
+            if(up == true){
+                circY -=3
+            }
+            if(up == false){
+                circY +=3
+            }
         }
+
     </script>
 </body>
 </html>
